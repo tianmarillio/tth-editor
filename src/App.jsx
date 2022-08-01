@@ -1,7 +1,6 @@
 import React from "react";
 import { Editor } from "@tinymce/tinymce-react";
 import useEditor from "./hooks/useEditor";
-import pretty from "pretty";
 
 export default function App() {
   const { editorRef, log, htmlOutput, convertToHtml } = useEditor();
@@ -52,17 +51,6 @@ export default function App() {
           }}
         />
       </div>
-
-      {/* <div className="col-span-1">
-        <div>
-          <button className="bg-slate-600 text-white" onClick={convertToHtml}>
-            Log editor content
-          </button>
-        </div>
-        <div>
-          <pre>{pretty(htmlOutput)}</pre>
-        </div>
-      </div> */}
     </div>
   );
 }
